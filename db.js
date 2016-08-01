@@ -1,9 +1,9 @@
 //gets the module sequelize
 var Sequelize = require('sequelize');
 
+//postgress://postgress:password@localhost:5432/workoutlog (database url)
 //connects to postgres gives location and what time of db client
-var sequelize = new Sequelize('workoutlog', 'postgres', process.env.DB_PASSWORD, {
-	host: 'localhost',
+var sequelize = new Sequelize(process.env.DATABASE_URL, {
 	dialect: 'postgres'
 });
 
