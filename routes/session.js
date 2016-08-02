@@ -33,5 +33,11 @@ router.post('/', function(req, res){
 	);
 });
 
+router.get('/', function(req, res){
+	if(req.user){
+		res.send(req.user.username);
+	}
+});
+
 module.exports = router;
 
